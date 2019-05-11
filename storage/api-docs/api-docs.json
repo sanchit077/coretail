@@ -1,0 +1,278 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Co-Retails APIs",
+        "version": "1.0.0"
+    },
+    "basePath": "/api/v1",
+    "paths": {
+        "/user/signUp": {
+            "post": {
+                "tags": [
+                    "User Register & Login Section"
+                ],
+                "summary": "User Register",
+                "description": "User Registeration",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "formData",
+                        "description": "Full Name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "email",
+                        "in": "formData",
+                        "description": "Email",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "password",
+                        "in": "formData",
+                        "description": "Password",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "type",
+                        "in": "formData",
+                        "description": "1 for landloard, 2 for brand owner and 3 for both",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "timezone",
+                        "in": "formData",
+                        "description": "TimeZone Eg - Asia/Kolkata",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "latitude",
+                        "in": "formData",
+                        "description": "Latitude",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "longitude",
+                        "in": "formData",
+                        "description": "Longitude",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "fcm_id",
+                        "in": "formData",
+                        "description": "FCM ID for push notifications",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "400": {
+                        "description": "Validation Error"
+                    },
+                    "500": {
+                        "description": "Api Error"
+                    }
+                }
+            }
+        },
+        "/user/verifySocialAccount": {
+            "post": {
+                "tags": [
+                    "User Social Login Section"
+                ],
+                "summary": "User Social Login",
+                "description": "User Social Login",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "formData",
+                        "description": "Full Name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "email",
+                        "in": "formData",
+                        "description": "Email",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "provider_user_id",
+                        "in": "formData",
+                        "description": "Socail Media Unique ID",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "provider",
+                        "in": "formData",
+                        "description": "Social Media Name like google, facebook",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "timezone",
+                        "in": "formData",
+                        "description": "TimeZone Eg - Asia/Kolkata",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "latitude",
+                        "in": "formData",
+                        "description": "Latitude",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "longitude",
+                        "in": "formData",
+                        "description": "Longitude",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "profile_pic",
+                        "in": "formData",
+                        "description": "Profile Picture",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "fcm_id",
+                        "in": "formData",
+                        "description": "FCM ID for push notifications",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "400": {
+                        "description": "Validation Error"
+                    },
+                    "500": {
+                        "description": "Api Error"
+                    }
+                }
+            }
+        },
+        "/user/login": {
+            "post": {
+                "tags": [
+                    "User Register & Login Section"
+                ],
+                "summary": "User Login",
+                "description": "User Login",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "formData",
+                        "description": "Email",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "password",
+                        "in": "formData",
+                        "description": "Password",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "fcm_id",
+                        "in": "formData",
+                        "description": "FCM ID for Push Notifications",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "device_type",
+                        "in": "formData",
+                        "description": "Device type like 'web', 'android', 'ios'",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "timezone",
+                        "in": "formData",
+                        "description": "TimeZone Eg - Asia/Kolkata",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "400": {
+                        "description": "Validation Error"
+                    },
+                    "500": {
+                        "description": "Api Error"
+                    }
+                }
+            }
+        },
+        "/user/logout": {
+            "post": {
+                "tags": [
+                    "User Register & Login Section"
+                ],
+                "summary": "User Logout",
+                "description": "User Logout",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "400": {
+                        "description": "Validation Error"
+                    },
+                    "500": {
+                        "description": "Api Error"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "security": [
+                    {
+                        "default": "Bearer "
+                    }
+                ]
+            }
+        }
+    },
+    "definitions": {},
+    "securityDefinitions": {
+        "default": {
+            "type": "apiKey",
+            "name": "Authorization",
+            "in": "header"
+        }
+    }
+}

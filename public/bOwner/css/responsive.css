@@ -1,0 +1,108 @@
+/*768 media css start*/
+@media (max-width:768px){
+.navbar .navbar-collapse {
+position: absolute;
+top: 100%;
+background-color: #fff;
+box-shadow: 5px 4px 12px #ccc;
+border-radius: 3px;
+padding: 15px 15px 0;
+right: 0;
+z-index: 9;
+}
+.customNav .navbar .navbar-nav .nav-item {
+margin: 0 15px 15px;
+}
+.navbar .navbar-toggler {
+color: rgba(0,0,0,.5);
+border-color: rgba(0,0,0,.1);
+padding: 0;
+border: none;
+}
+.loginInner {
+padding: 15px;
+height: auto;
+}
+.loginBg{ height: auto; }
+.logo {
+margin: 15px;
+}
+.customNav {
+float: right;
+right: 0;
+}
+}
+/*768 media css end*/
+/*767 media css start*/
+@media (max-width:767px){
+	body .container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.header01{
+position: relative;
+}
+#content{ margin-top:0;  }
+.customNav {
+float: left;
+}
+.navbar-expand .navbar-nav .dropdown-menu {
+right: 0; 
+left: auto;
+}
+.innder-logo {
+text-align: center;
+padding-top: 8px;
+padding-bottom: 8px;
+}
+.customNavRight .navbar-nav .nav-item {
+margin-left: 15px;
+}
+.customNavRight {
+float: right;
+}
+.navbar .navbar-collapse{ right:auto; }
+.addProductImgs {
+justify-content: center;
+flex-direction: column;
+align-items: center;
+}
+.addedImg {
+margin-left: 0;
+margin-top: 15px;
+}
+.btn.cancelBtn, .btn.addProduct {
+max-width: 165px;
+}
+
+.btn-back, .btn-next{
+	min-width:auto; 
+}
+.btnGrp {
+    text-align: center;
+}
+.stepsRow {
+    margin: 30px 0 0;
+}
+.verticalSteps {
+   
+    padding-left: 0;
+}
+.addNewProduct.btn{
+	margin-bottom:30px;
+}
+.illustration{ height:auto; }
+.addNewProd { 
+    margin-bottom: 60px;
+}
+.addNewProdInput .addProduct{
+	max-width:100% !important; 
+}
+}
+/*767 media css en
+/*414 media css start*/
+@media (max-width:414px){
+.acType .btn{ margin-bottom:15px; }
+.btnCont .btn.mr-2, .btnCont .btn.ml-2{ margin-right:0 !important;  margin-left:0 !important; margin-bottom: 15px;  }
+}
+/*414 media css end*/
